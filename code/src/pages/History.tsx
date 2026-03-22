@@ -18,7 +18,10 @@ export function useRecipeHistory() {
 
   const addToHistory = (recipe: Recipe) => {
     setHistory((prev) => {
-      const updated = [recipe, ...prev.filter((r) => r.id !== recipe.id)].slice(0, 20);
+      const updated = [recipe, ...prev.filter((r) => r.id !== recipe.id)].slice(
+        0,
+        20,
+      );
       localStorage.setItem(HISTORY_KEY, JSON.stringify(updated));
       return updated;
     });
@@ -41,8 +44,12 @@ export default function HistoryPage() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="font-display text-3xl font-bold text-foreground">History</h1>
-            <p className="mt-1 text-muted-foreground">Your previously generated recipes.</p>
+            <h1 className="font-display text-3xl font-bold text-foreground">
+              History
+            </h1>
+            <p className="mt-1 text-muted-foreground">
+              Your previously generated recipes...
+            </p>
           </div>
           {history.length > 0 && (
             <button
@@ -57,18 +64,28 @@ export default function HistoryPage() {
         {history.length > 0 ? (
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {history.map((recipe, i) => (
-              <RecipeCard key={recipe.id} recipe={recipe} onClick={setSelectedRecipe} index={i} />
+              <RecipeCard
+                key={recipe.id}
+                recipe={recipe}
+                onClick={setSelectedRecipe}
+                index={i}
+              />
             ))}
           </div>
         ) : (
           <div className="mt-16 text-center">
             <HistoryIcon className="mx-auto h-12 w-12 text-muted-foreground/40" />
-            <p className="mt-3 text-muted-foreground">No recipes generated yet. Try the AI Generator!</p>
+            <p className="mt-3 text-muted-foreground">
+              No recipes generated yet. Try the AI Generator!
+            </p>
           </div>
         )}
       </div>
 
-      <RecipeDetail recipe={selectedRecipe} onClose={() => setSelectedRecipe(null)} />
+      <RecipeDetail
+        recipe={selectedRecipe}
+        onClose={() => setSelectedRecipe(null)}
+      />
     </div>
   );
 }
