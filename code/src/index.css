@@ -118,3 +118,11 @@
     background-color: hsl(var(--warm-surface));
   }
 }
+
+/* 
+  Custom Tailwind Theme Configuration
+  - Defines light and dark color palettes
+  - Uses CSS variables for flexibility
+  - Includes custom fonts and utility classes
+  - Designed for a warm, food/recipe-style UI theme
+*/
