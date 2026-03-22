@@ -135,3 +135,7 @@ The production output is generated in the dist folder and can be deployed to any
 ## License
 
 No license file is currently included. Add a LICENSE file if you want to define usage terms.
+
+## Figma Link
+
+https://www.figma.com/design/dE8dxO6JdX4sRJeQxkUcq7/Untitled?node-id=0-1&t=gGOdSuL5sO4xCpMz-1
