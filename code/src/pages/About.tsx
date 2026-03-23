@@ -2,10 +2,26 @@ import { motion } from "framer-motion";
 import { ChefHat, Sparkles, BookOpen, Heart, Users, Zap } from "lucide-react";
 
 const features = [
-  { icon: Sparkles, title: "AI-Powered", desc: "Smart recipe generation based on your available ingredients and preferences." },
-  { icon: BookOpen, title: "Recipe Library", desc: "Browse a curated collection of recipes across cuisines and difficulty levels." },
-  { icon: Heart, title: "Save Favorites", desc: "Bookmark recipes you love and access them anytime from your favorites." },
-  { icon: Zap, title: "Instant Results", desc: "Get complete recipes with instructions in seconds, not minutes." },
+  {
+    icon: Sparkles,
+    title: "AI-Powered",
+    desc: "Smart recipe generation based on your available ingredients and preferences.",
+  },
+  {
+    icon: BookOpen,
+    title: "Recipe Library",
+    desc: "Browse a curated collection of recipes across cuisines and difficulty levels.",
+  },
+  {
+    icon: Heart,
+    title: "Save Favorites",
+    desc: "Bookmark recipes you love and access them anytime from your favorites.",
+  },
+  {
+    icon: Zap,
+    title: "Instant Results",
+    desc: "Get complete recipes with instructions in seconds, not minutes.",
+  },
 ];
 
 const team = [
@@ -32,8 +48,9 @@ export default function About() {
               About <span className="text-gradient-warm">RecipeAI</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-muted-foreground">
-              RecipeAI is your intelligent cooking companion. We combine the art of cooking with the power of
-              artificial intelligence to help you create delicious meals from whatever ingredients you have on hand.
+              RecipeAI is your intelligent cooking companion. We combine the art
+              of cooking with the power of artificial intelligence to help you
+              create delicious meals from whatever ingredients you have on hand.
             </p>
           </motion.div>
         </div>
@@ -47,11 +64,14 @@ export default function About() {
           viewport={{ once: true }}
           className="mx-auto max-w-3xl text-center"
         >
-          <h2 className="font-display text-3xl font-bold text-foreground">Our Mission</h2>
+          <h2 className="font-display text-3xl font-bold text-foreground">
+            Our Mission
+          </h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            We believe everyone deserves a great meal, no matter their skill level or what's in the pantry.
-            Our mission is to eliminate food waste, inspire creativity in the kitchen, and make cooking
-            accessible and enjoyable for all.
+            We believe everyone deserves a great and delicious meal, no matter
+            their skill level or what's in the pantry. Our mission is to
+            eliminate food waste, inspire creativity in the kitchen, and make
+            cooking accessible and enjoyable for all.
           </p>
         </motion.div>
       </section>
@@ -59,7 +79,9 @@ export default function About() {
       {/* Features */}
       <section className="bg-warm-glow py-16">
         <div className="container mx-auto px-4">
-          <h2 className="mb-10 text-center font-display text-3xl font-bold text-foreground">What We Offer</h2>
+          <h2 className="mb-10 text-center font-display text-3xl font-bold text-foreground">
+            What We Offer
+          </h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((f, i) => (
               <motion.div
@@ -73,7 +95,9 @@ export default function About() {
                 <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                   <f.icon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-display text-lg font-semibold text-foreground">{f.title}</h3>
+                <h3 className="font-display text-lg font-semibold text-foreground">
+                  {f.title}
+                </h3>
                 <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
               </motion.div>
             ))}
@@ -83,7 +107,9 @@ export default function About() {
 
       {/* Team */}
       <section className="container mx-auto px-4 py-16">
-        <h2 className="mb-10 text-center font-display text-3xl font-bold text-foreground">Meet the Team</h2>
+        <h2 className="mb-10 text-center font-display text-3xl font-bold text-foreground">
+          Meet the Team
+        </h2>
         <div className="flex flex-wrap justify-center gap-8">
           {team.map((m, i) => (
             <motion.div
@@ -95,7 +121,9 @@ export default function About() {
               className="w-48 rounded-xl border border-border bg-card p-6 text-center shadow-sm"
             >
               <div className="text-5xl mb-3">{m.emoji}</div>
-              <h3 className="font-display text-lg font-semibold text-foreground">{m.name}</h3>
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                {m.name}
+              </h3>
               <p className="text-sm text-muted-foreground">{m.role}</p>
             </motion.div>
           ))}
@@ -106,8 +134,12 @@ export default function About() {
       <section className="bg-warm-surface py-16">
         <div className="container mx-auto px-4 text-center">
           <Users className="mx-auto mb-4 h-8 w-8 text-primary" />
-          <h2 className="font-display text-2xl font-bold text-foreground">Ready to Start Cooking?</h2>
-          <p className="mt-2 text-muted-foreground">Join thousands of home chefs using RecipeAI every day.</p>
+          <h2 className="font-display text-2xl font-bold text-foreground">
+            Ready to Start Cooking?
+          </h2>
+          <p className="mt-2 text-muted-foreground">
+            Join thousands of home chefs using RecipeAI every day.
+          </p>
           <a
             href="/"
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
